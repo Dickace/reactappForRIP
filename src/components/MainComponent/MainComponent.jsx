@@ -26,9 +26,6 @@ function MainComponent () {
             .catch(error => console.log(error))
     }
 
-    const checkFunc = () =>{
-        console.log();
-    }
 
     const deletePost = (id) =>{
         axios({
@@ -39,7 +36,6 @@ function MainComponent () {
             setPostsList(postsList.filter((item)=>{
                 return item !== value
             }))
-
         })
             .catch(error =>{console.log(error)})
 
@@ -99,7 +95,7 @@ function MainComponent () {
     return(
         <div>
             {console.log(postsList)}
-            {postsList ? postsList.map( (item, index)=>{
+            {postsList ? postsList.map( (item)=>{
                     return(
                         <Post editPost={editPost} deletePost={deletePost} favorite={favorite} item={item} key={item.id} id={item.id}/>
                     )

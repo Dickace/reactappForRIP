@@ -1,4 +1,4 @@
-import React, {createRef, useEffect, useRef, useState} from 'react'
+import React, { useEffect, useRef, useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHeart} from "@fortawesome/free-solid-svg-icons";
 import {faHeart as heart, faTrashAlt, faEdit} from "@fortawesome/free-regular-svg-icons";
@@ -14,7 +14,7 @@ const Post = ({ item, id, favorite, editPost, deletePost }) => {
     const handleDelete = () => {
         deletePost(id);
     }
-    const handleEdit = (event) => {
+    const handleEdit = ( ) => {
         if (!editing){
             setEditing(true)
 
@@ -32,7 +32,7 @@ const Post = ({ item, id, favorite, editPost, deletePost }) => {
             handleEdit();
         }
     }
-    const handleBlur = (event) =>{
+    const handleBlur = ( ) =>{
         handleEdit()
     }
     const inputRef= useRef();
