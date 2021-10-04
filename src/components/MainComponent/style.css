@@ -1,0 +1,11 @@
+.addBtn{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.addBtn > svg{
+    margin: 20px auto;
+    font-size: 40px;
+    color: forestgreen;
+}
